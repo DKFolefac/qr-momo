@@ -23,7 +23,7 @@ pipeline {
                  sh 'docker login -u $USERNAME -p $PASSWORD'
     // Your Docker commands using the environment variables
                  sh 'docker build -t qrmomojenk:${BUILD_NUMBER} .'
-                sh 'docker tag qrmomojenk: ${BUILD_NUMBER} dkfolefac/qrmomojenk:${BUILD_NUMBER}'
+                sh 'docker tag qrmomojenk:${BUILD_NUMBER} dkfolefac/qrmomojenk:${BUILD_NUMBER}'
                 sh 'docker push dkfolefac/qrmomojenk:${BUILD_NUMBER}'
              }
             } 
