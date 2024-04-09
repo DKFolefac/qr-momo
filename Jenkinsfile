@@ -29,17 +29,8 @@ pipeline {
             } 
 
         }         
-      //  stage ('sonarqube analysis'){
-        //    environment {
-          //      scannerHome = tool "sonarscanner"
-            //}
-            //steps{
-              //  withSonarQubeEnv('sonarscanner') {
-                //  sh "${scannerHome}/bin/sonar-scanner"
-                //}    
-            //}
-
-        //}
+    
+       
     }    
 }
     
