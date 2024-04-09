@@ -1,6 +1,8 @@
-FROM node:16-alpine
-WORKDIR /app
-COPY package*.json ./
-COPY . . 
+
+FROM nginx:1.23-alpine
+
+COPY build /usr/share/nginx/html
+
 EXPOSE 80
-CMD ["npm", "start"]
+
+CMD ["nginx", "-g", "daemon off;"]
